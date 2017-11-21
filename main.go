@@ -1,7 +1,7 @@
 package main
 
 import (
-	"cloudgo-io/server"
+	"github.com/pineapple-chicken/cloudgo-io/server"
 )
 
 func main() {

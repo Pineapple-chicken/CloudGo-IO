@@ -36,15 +36,15 @@ func apihandle(w http.ResponseWriter, req *http.Request) {
 	rdr.JSON(w, http.StatusOK, struct {
 		ID      string
 		Content string
-	}{ID: "1268", Content: "Pineapple-chickenu"})
+	}{ID: "1268", Content: "Pineapple-chicken"})
 }
 func showTable(rw http.ResponseWriter, r *http.Request) {
 	r.ParseForm()
 	rdr := render.New()
 	err := rdr.HTML(rw, http.StatusOK, "table", struct {
-		Un string
-		Pw string
-	}{Un: r.Form["username"][0], Pw: r.Form["password"][0]})
+		Username string
+		Password string
+	}{Username: r.Form["username"][0], Password: r.Form["password"][0]})
 	if err != nil {
 		panic("render fail!")
 	}
